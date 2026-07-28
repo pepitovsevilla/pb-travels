@@ -45,6 +45,7 @@ import {
 import { cn } from "@/lib/utils"
 import {
   hotel,
+  itadakiHealthyMap,
   morningRuns,
   pastryStops,
   referenceMaps,
@@ -317,7 +318,7 @@ function MapAccordion() {
         <AccordionTrigger className="min-h-14 py-3 text-base hover:no-underline">
           <span className="flex items-center gap-2">
             <MapIcon className="size-4 text-primary" />
-            Tokyo map
+            Our Tokyo map
           </span>
         </AccordionTrigger>
         <AccordionContent className="pb-4">
@@ -342,6 +343,21 @@ function MapAccordion() {
             Open map in Google Maps
             <ExternalLink className="size-3.5 opacity-60" />
           </a>
+          <div className="mt-5 border-t pt-5">
+            <p className="font-semibold">{itadakiHealthyMap.label}</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {itadakiHealthyMap.description}
+            </p>
+            <a
+              href={itadakiHealthyMap.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-lg border border-primary/15 bg-primary/5 px-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              Open Itadakihealthy map
+              <ExternalLink className="size-3.5 opacity-60" />
+            </a>
+          </div>
         </AccordionContent>
       </AccordionItem>
     </Accordion>

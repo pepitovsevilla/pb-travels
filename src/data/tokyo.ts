@@ -773,3 +773,10 @@ export const tokyoMap = {
   viewer:
     "https://www.google.com/maps/d/viewer?mid=1DZa9FPxP4NEecF3sXLAhtooC40B25X4&usp=sharing",
 }
+
+export const itadakiHealthyMap = {
+  label: "Itadakihealthy · Vegan in Japan",
+  href: "https://maps.app.goo.gl/fSFT8q3fmAKtsWor6",
+  description:
+    "A shared Google Maps list with 2,280 vegan and vegan-friendly places across Japan.",
+}
