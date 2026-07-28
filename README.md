@@ -43,11 +43,11 @@ Replace both placeholder values in `.env.local`, then start the app:
 npm run dev
 ```
 
-Open `http://localhost:3000/2026/tokyo`. The browser will show its native Basic Auth prompt.
+Open `http://localhost:3000/`. The browser will show its native Basic Auth prompt before displaying the guide index.
 
 ## Basic Auth on Vercel
 
-The guide is protected by `src/proxy.ts`. It reads two server-only variables:
+The entire site is protected by `src/proxy.ts`. It reads two server-only variables:
 
 - `BASIC_AUTH_USER`
 - `BASIC_AUTH_PASSWORD`

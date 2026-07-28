@@ -69,5 +69,6 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/2026/tokyo/:path*"],
+  // Protect every user-facing route while allowing Next.js internal assets to load.
+  matcher: ["/((?!_next/|favicon.ico).*)"],
 }
