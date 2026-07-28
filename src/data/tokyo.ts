@@ -762,7 +762,14 @@ export const tripDetails = [
 export const referenceMaps = [
   link(
     "Tokyo 2026 Google My Maps",
-    "https://www.google.com/maps/d/u/0/edit?mid=1DZa9FPxP4NEecF3sXLAhtooC40B25X4&usp=sharing"
+    "https://www.google.com/maps/d/viewer?mid=1DZa9FPxP4NEecF3sXLAhtooC40B25X4&usp=sharing"
   ),
   link("Additional map reference", "https://maps.app.goo.gl/fSFT8q3fmAKtsWor6"),
 ]
+
+export const tokyoMap = {
+  embed:
+    "https://www.google.com/maps/d/embed?mid=1DZa9FPxP4NEecF3sXLAhtooC40B25X4",
+  viewer:
+    "https://www.google.com/maps/d/viewer?mid=1DZa9FPxP4NEecF3sXLAhtooC40B25X4&usp=sharing",
+}

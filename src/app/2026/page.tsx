@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, ArrowRight, Globe2 } from "lucide-react"
+import { ArrowLeft, ArrowRight, MapPin } from "lucide-react"
 
 import {
   Card,
@@ -26,18 +26,18 @@ export default function YearPage() {
             Travel guides
           </p>
           <h1 className="mt-2 text-4xl font-black tracking-[-0.04em]">2026</h1>
-          <p className="mt-2 text-muted-foreground">Choose a destination.</p>
+          <p className="mt-2 text-muted-foreground">Choose a city guide.</p>
         </header>
 
-        <nav aria-label="2026 destinations">
-          <Link href="/2026/japan" className="group block rounded-xl focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50">
+        <nav aria-label="2026 city guides">
+          <Link href="/2026/tokyo" className="group block rounded-xl focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50">
             <Card className="transition-colors group-hover:border-primary/40 group-hover:bg-primary/[0.03]">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-xl">
-                  <Globe2 className="size-5 text-primary" />
-                  Japan
+                  <MapPin className="size-5 text-primary" />
+                  Tokyo
                 </CardTitle>
-                <CardDescription>Tokyo · August 2026</CardDescription>
+                <CardDescription>Japan · August 6–13, 2026</CardDescription>
               </CardHeader>
               <CardContent className="flex items-center justify-between pt-0 text-sm font-semibold text-primary">
                 <span>Open destination</span>

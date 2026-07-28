@@ -9,6 +9,7 @@ import {
   ExternalLink,
   Footprints,
   Luggage,
+  Map as MapIcon,
   MapPin,
   MoonStar,
   Plane,
@@ -50,6 +51,7 @@ import {
   reservations,
   tokyoDays,
   tripDetails,
+  tokyoMap,
   type PlaceLink,
   type TimelineItem,
 } from "@/data/tokyo"
@@ -299,6 +301,47 @@ function ReferenceAccordion() {
           </dl>
           <Separator className="my-3" />
           <PlaceLinks links={[hotel, ...referenceMaps]} compact />
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  )
+}
+
+function MapAccordion() {
+  return (
+    <Accordion
+      multiple
+      className="mb-4 overflow-hidden rounded-2xl border bg-card shadow-sm"
+    >
+      <AccordionItem value="map" className="px-4">
+        <AccordionTrigger className="min-h-14 py-3 text-base hover:no-underline">
+          <span className="flex items-center gap-2">
+            <MapIcon className="size-4 text-primary" />
+            Tokyo map
+          </span>
+        </AccordionTrigger>
+        <AccordionContent className="pb-4">
+          <p className="mb-3 text-sm text-muted-foreground">
+            Your saved food, hotel, and sightseeing pins in Google My Maps.
+          </p>
+          <div className="overflow-hidden rounded-xl border bg-muted">
+            <iframe
+              title="Tokyo 2026 Google My Maps"
+              src={tokyoMap.embed}
+              loading="lazy"
+              allowFullScreen
+              className="h-[22rem] w-full border-0"
+            />
+          </div>
+          <a
+            href={tokyoMap.viewer}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-primary underline decoration-primary/25 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            Open map in Google Maps
+            <ExternalLink className="size-3.5 opacity-60" />
+          </a>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
@@ -560,6 +603,7 @@ export function TokyoGuide() {
               Food first, with heat-friendly stops and flexible sightseeing.
             </p>
           </div>
+          <MapAccordion />
           <ReferenceAccordion />
         </section>
 
