@@ -1,6 +1,8 @@
 export type PlaceLink = {
   label: string
   href: string
+  kind?: "map" | "external"
+  instagram?: string
 }
 
 export type TimelineItem = {
@@ -38,12 +40,68 @@ export type TokyoDay = {
   timeline: TimelineItem[]
 }
 
-const maps = (label: string, query: string): PlaceLink => ({
-  label,
-  href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`,
-})
+const instagramByPlace: Record<string, string> = {
+  "T's Tantan Ecute Ueno": "https://www.instagram.com/tstantanjrc/",
+  "Vegan Izakaya Masaka Shibuya":
+    "https://www.instagram.com/vegan_izakaya_masaka/",
+  "Marugoto Vegan Dining Asakusa":
+    "https://www.instagram.com/marugotovegan_dining/",
+  "Vegan Bistro Jangara Harajuku":
+    "https://www.instagram.com/veganbistro_jangara/",
+  "Asakusa GURAKU Taiyaki":
+    "https://www.instagram.com/asakusa.taiyaki.guraku/",
+  "Hatoya's Vegan Fruit Sandwiches Asakusa":
+    "https://www.instagram.com/asakusa_hatoya/",
+  "I'm donut Gluten-Free Vegan 5-53-4 Jingumae":
+    "https://www.instagram.com/im.donut.gluten.free/",
+  "Jikasei MENSHO Shibuya PARCO":
+    "https://www.instagram.com/menya_shono/",
+  "Tokyo Vegan Bakes Shimokitazawa":
+    "https://www.instagram.com/tokyoveganbakes/",
+  "Universal Bakes and Cafe":
+    "https://www.instagram.com/universalbakes_tokyo/",
+  "THE NUTS EXCHANGE Tomigaya":
+    "https://www.instagram.com/the_nuts_exchange/",
+  "MORETHAN BAKERY Shinjuku":
+    "https://www.instagram.com/morethan_bakery/",
+  "AIN SOPH Journey Shinjuku":
+    "https://www.instagram.com/ainsoph.journey/",
+  "Vegan Izakaya Nowhere":
+    "https://www.instagram.com/veganizakayanowhere/",
+  "marbre vegan Shinjuku": "https://www.instagram.com/marbre_vegan/",
+  "KOMEDA is Higashi Ginza": "https://www.instagram.com/komeda_is/",
+  "T's Tantan Tokyo Station": "https://www.instagram.com/tstantanjrc/",
+  "The Vegan Marshmallooow Ginza":
+    "https://www.instagram.com/theveganmarshmallooow/",
+  "Ginza Tsuboyaki Imo": "https://www.instagram.com/tsubo_yakiimo/",
+  "2foods Ginza Loft": "https://www.instagram.com/2foods.official/",
+  "NEOShinjuku Atsushi":
+    "https://www.instagram.com/neoshinjukuatsushi/",
+  "Zen Okonomiyaki Shinjuku": "https://www.instagram.com/okonomi.zen/",
+  "Shochikuen Cafe Asakusa":
+    "https://www.instagram.com/shochikuen_vegan_cafe/",
+  "T's Tantan Narita Airport Terminal 2":
+    "https://www.instagram.com/tstantanjrc/",
+  "hal okada vegan patisserie Hiroo":
+    "https://www.instagram.com/halokada_vegan_patisserie/",
+}
 
-const link = (label: string, href: string): PlaceLink => ({ label, href })
+const maps = (label: string, query: string): PlaceLink => {
+  const instagram = instagramByPlace[query]
+
+  return {
+    label,
+    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`,
+    kind: "map",
+    ...(instagram ? { instagram } : {}),
+  }
+}
+
+const link = (label: string, href: string): PlaceLink => ({
+  label,
+  href,
+  kind: "external",
+})
 
 export const hotel = maps(
   "Tosei Hotel Cocone Ueno Okachimachi",
@@ -351,7 +409,7 @@ export const tokyoDays: TokyoDay[] = [
     area: "Shinjuku · Skytree",
     lunch: [maps("AIN SOPH. Journey", "AIN SOPH Journey Shinjuku")],
     dinner: [
-      link("Vegan Izakaya Nowhere", "https://veganizakayanowhere.com/"),
+      maps("Vegan Izakaya Nowhere", "Vegan Izakaya Nowhere"),
       maps("Masaka backup", "Vegan Izakaya Masaka Shibuya"),
     ],
     dessert: [maps("marbre vegan", "marbre vegan Shinjuku")],
@@ -413,6 +471,7 @@ export const tokyoDays: TokyoDay[] = [
         description: "Near Skytree. It opens at 5:00 PM on Monday.",
         bullets: ["If Nowhere is unavailable, repeat Masaka in Shibuya."],
         links: [
+          maps("Open in Maps", "Vegan Izakaya Nowhere"),
           link("Official site", "https://veganizakayanowhere.com/"),
           maps("Masaka backup", "Vegan Izakaya Masaka Shibuya"),
         ],

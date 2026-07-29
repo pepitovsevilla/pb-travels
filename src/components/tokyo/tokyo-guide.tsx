@@ -1,8 +1,10 @@
 "use client"
 
+import Link from "next/link"
 import { useState, type ComponentType } from "react"
 import {
   Activity,
+  ArrowLeft,
   BriefcaseBusiness,
   CalendarDays,
   CakeSlice,
@@ -57,6 +59,25 @@ import {
   type TimelineItem,
 } from "@/data/tokyo"
 
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect width="18" height="18" x="3" y="3" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
 const timelineIcons: Record<
   TimelineItem["icon"],
   ComponentType<{ className?: string }>
@@ -81,22 +102,48 @@ function PlaceLinks({
 }) {
   return (
     <div className="flex flex-wrap gap-2">
-      {links.map((item) => (
-        <a
-          key={`${item.label}-${item.href}`}
-          href={item.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(
-            "inline-flex min-h-11 items-center gap-1.5 rounded-lg border border-primary/15 bg-primary/5 px-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-            compact && "min-h-9 px-2.5 text-xs"
-          )}
-        >
-          <MapPin className="size-3.5 shrink-0" />
-          {item.label}
-          <ExternalLink className="size-3 opacity-55" />
-        </a>
-      ))}
+      {links.map((item) => {
+        const PrimaryIcon = item.kind === "map" ? MapPin : ExternalLink
+        const instagramName =
+          item.label === "Open in Maps" ? "this food spot" : item.label
+
+        return (
+          <div
+            key={`${item.label}-${item.href}`}
+            className="flex flex-wrap gap-2"
+          >
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "inline-flex min-h-11 items-center gap-1.5 rounded-lg border border-primary/15 bg-primary/5 px-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                compact && "px-2.5 text-xs"
+              )}
+            >
+              <PrimaryIcon className="size-3.5 shrink-0" />
+              {item.label}
+              <ExternalLink className="size-3 opacity-55" />
+            </a>
+            {item.instagram ? (
+              <a
+                href={item.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${instagramName} on Instagram`}
+                className={cn(
+                  "inline-flex min-h-11 items-center gap-1.5 rounded-lg border border-pink-200 bg-pink-50 px-3 text-sm font-semibold text-pink-700 transition-colors hover:bg-pink-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                  compact && "px-2.5 text-xs"
+                )}
+              >
+                <InstagramIcon className="size-3.5 shrink-0" />
+                Instagram
+                <ExternalLink className="size-3 opacity-55" />
+              </a>
+            ) : null}
+          </div>
+        )
+      })}
     </div>
   )
 }
@@ -113,21 +160,36 @@ function FoodValue({
   }
 
   return (
-    <div className="flex flex-wrap gap-x-2 gap-y-1">
-      {links.map((item, index) => (
-        <span key={item.href} className="text-sm">
-          <a
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-primary underline decoration-primary/25 underline-offset-4"
-          >
-            {item.label}
-          </a>
-          {index < links.length - 1 ? (
-            <span className="ml-2 text-muted-foreground">or</span>
-          ) : null}
-        </span>
+    <div className="grid gap-2">
+      {links.map((item) => (
+        <div
+          key={item.href}
+          className="rounded-lg border bg-background/80 px-3 py-2.5"
+        >
+          <p className="font-semibold text-foreground">{item.label}</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-md border border-primary/15 bg-primary/5 px-3 text-xs font-semibold text-primary"
+            >
+              <MapPin className="size-3.5" />
+              Maps
+            </a>
+            {item.instagram ? (
+              <a
+                href={item.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 items-center gap-1.5 rounded-md border border-pink-200 bg-pink-50 px-3 text-xs font-semibold text-pink-700"
+              >
+                <InstagramIcon className="size-3.5" />
+                Instagram
+              </a>
+            ) : null}
+          </div>
+        </div>
       ))}
     </div>
   )
@@ -137,14 +199,13 @@ function ReferenceAccordion() {
   return (
     <Accordion
       multiple
-      defaultValue={["food"]}
       className="overflow-hidden rounded-2xl border bg-card shadow-sm"
     >
       <AccordionItem value="food" className="px-4">
         <AccordionTrigger className="min-h-14 py-3 text-base hover:no-underline">
           <span className="flex items-center gap-2">
             <Utensils className="size-4 text-primary" />
-            Food spots by day
+            Food spots
           </span>
         </AccordionTrigger>
         <AccordionContent className="pb-4">
@@ -600,6 +661,13 @@ export function TokyoGuide() {
     <main id="top" className="min-h-svh bg-muted/45 pb-28">
       <header className="border-b bg-card">
         <div className="mx-auto max-w-2xl px-4 py-6 sm:px-6">
+          <Link
+            href="/"
+            className="mb-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            <ArrowLeft className="size-4" />
+            All guides
+          </Link>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
             Pepito + Bianca
           </p>
@@ -623,11 +691,23 @@ export function TokyoGuide() {
           <div className="mb-5">
             <h2 className="text-2xl font-bold tracking-tight">Overview</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Food first, with heat-friendly stops and flexible sightseeing.
+              Food leads each day, with indoor breaks for the August heat.
             </p>
           </div>
-          <MapAccordion />
           <ReferenceAccordion />
+          <div className="mt-4">
+            <MapAccordion />
+          </div>
+        </section>
+
+        <section
+          id="itinerary"
+          className="scroll-mt-6 border-t pb-2 pt-8"
+        >
+          <h2 className="text-2xl font-bold tracking-tight">Daily itinerary</h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Tap the calendar at any time to jump between days.
+          </p>
         </section>
 
         {tokyoDays.map((day) => (
