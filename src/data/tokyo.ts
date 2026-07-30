@@ -41,7 +41,7 @@ export type TokyoDay = {
 }
 
 const instagramByPlace: Record<string, string> = {
-  "T's Tantan Ecute Ueno": "https://www.instagram.com/tstantanjrc/",
+  "T's Tantan Ecute Ueno": "https://www.instagram.com/ts_tantan_jp/",
   "Vegan Izakaya Masaka Shibuya":
     "https://www.instagram.com/vegan_izakaya_masaka/",
   "Marugoto Vegan Dining Asakusa":
@@ -70,7 +70,7 @@ const instagramByPlace: Record<string, string> = {
     "https://www.instagram.com/veganizakayanowhere/",
   "marbre vegan Shinjuku": "https://www.instagram.com/marbre_vegan/",
   "KOMEDA is Higashi Ginza": "https://www.instagram.com/komeda_is/",
-  "T's Tantan Tokyo Station": "https://www.instagram.com/tstantanjrc/",
+  "T's Tantan Tokyo Station": "https://www.instagram.com/ts_tantan_jp/",
   "The Vegan Marshmallooow Ginza":
     "https://www.instagram.com/theveganmarshmallooow/",
   "Ginza Tsuboyaki Imo": "https://www.instagram.com/tsubo_yakiimo/",
@@ -79,9 +79,9 @@ const instagramByPlace: Record<string, string> = {
     "https://www.instagram.com/neoshinjukuatsushi/",
   "Zen Okonomiyaki Shinjuku": "https://www.instagram.com/okonomi.zen/",
   "Shochikuen Cafe Asakusa":
-    "https://www.instagram.com/shochikuen_vegan_cafe/",
+    "https://www.instagram.com/shochikuen_vegan/",
   "T's Tantan Narita Airport Terminal 2":
-    "https://www.instagram.com/tstantanjrc/",
+    "https://www.instagram.com/ts_tantan_jp/",
   "hal okada vegan patisserie Hiroo":
     "https://www.instagram.com/halokada_vegan_patisserie/",
 }
