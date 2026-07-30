@@ -126,7 +126,7 @@ export const tokyoDays: TokyoDay[] = [
         icon: "flight",
         title: "Narita to Ueno",
         bullets: [
-          "Jetstar GK40 lands at Narita at 6:10 AM.",
+          "Flight lands at Narita at 6:10 AM.",
           "Take the Skyliner to Nippori, then the Yamanote Line to Ueno.",
           "Leave your luggage at the hotel before lunch.",
         ],
@@ -682,9 +682,9 @@ export const tokyoDays: TokyoDay[] = [
         label: "Departure",
         icon: "flight",
         bullets: [
-          "Walk about six minutes to Jetstar’s Terminal 3, then complete check-in and security.",
+          "Walk about six minutes to Terminal 3, then complete check-in and security.",
           "Airport snacks: fruit, nuts, edamame, soy drinks, and clearly labeled vegan bread or sweets.",
-          "Jetstar GK41 departs Narita at 7:40 PM and arrives in Manila at 11:40 PM.",
+          "Flight departs Narita at 7:40 PM and arrives in Manila at 11:40 PM.",
         ],
       },
     ],
@@ -812,8 +812,8 @@ export const morningRuns = [
 export const tripDetails = [
   { label: "Check-in", value: "Thursday, August 6 after 3:00 PM" },
   { label: "Check-out", value: "Thursday, August 13 before 10:00 AM" },
-  { label: "Arrival", value: "Jetstar GK40 · Manila 12:40 AM → Narita 6:10 AM" },
-  { label: "Departure", value: "Jetstar GK41 · Narita 7:40 PM → Manila 11:40 PM" },
+  { label: "Arrival", value: "Manila 12:40 AM → Narita 6:10 AM" },
+  { label: "Departure", value: "Narita 7:40 PM → Manila 11:40 PM" },
   { label: "CEO dinner", value: "Sunday, August 9 evening" },
   { label: "Colleague meeting", value: "Wednesday, August 12 morning, likely around Ueno" },
 ]
