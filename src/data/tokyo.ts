@@ -172,8 +172,8 @@ export const tokyoDays: TokyoDay[] = [
     day: 2,
     date: "Friday, August 7",
     shortDate: "Aug 7",
-    subtitle: "Asakusa and work",
-    area: "Asakusa · Harajuku",
+    subtitle: "Asakusa, work, and Bianca’s ASICS run",
+    area: "Asakusa · Marunouchi · Harajuku",
     lunch: [maps("Marugoto Vegan Dining", "Marugoto Vegan Dining Asakusa")],
     dinner: [maps("Vegan Bistro Jangara", "Vegan Bistro Jangara Harajuku")],
     dessert: [
@@ -182,13 +182,6 @@ export const tokyoDays: TokyoDay[] = [
       maps("I’m donut?", "I'm donut Gluten-Free Vegan 5-53-4 Jingumae"),
     ],
     timeline: [
-      {
-        label: "5:00 AM run",
-        icon: "run",
-        title: "Shinobazu Pond + Ueno Park",
-        description: "About 4 km from the hotel.",
-        links: [maps("Route area", "Shinobazu Pond")],
-      },
       {
         label: "Morning",
         icon: "walk",
@@ -230,22 +223,37 @@ export const tokyoDays: TokyoDay[] = [
         label: "Work · 2:30–5:30 PM",
         icon: "work",
         tone: "work",
-        title: "Hotel work block",
-        description: "Both work in the hotel room.",
+        title: "Pepito: hotel work block",
+        description: "Pepito returns to the hotel. Bianca continues to Marunouchi.",
       },
       {
-        label: "Cool down",
-        icon: "cool",
-        description: "Asakusa ROX, EKIMISE, or the hotel.",
+        label: "Bianca · 4:30 PM",
+        icon: "run",
+        title: "ASICS RUN TOKYO MARUNOUCHI",
+        description: "Rent shoes, then run one 5 km Imperial Palace loop around 5:00 PM.",
+        callout: "Cool down indoors at KITTE or Marunouchi Building before the run.",
+        bullets: [
+          "Ask staff which models and sizes are available; rentals cannot be reserved.",
+          "Return to shower and change, then take the Chiyoda Line from Nijubashimae to Meiji-jingumae.",
+          "Check the heat index first. Shorten or skip the loop if conditions are unsafe.",
+        ],
+        links: [
+          maps("Open in Maps", "ASICS RUN TOKYO MARUNOUCHI"),
+          link(
+            "Hours and rentals",
+            "https://www.asics.com/jp/ja-jp/mk/store/asicsruntokyo-marunouchi"
+          ),
+          maps("KITTE", "KITTE Marunouchi"),
+        ],
       },
       {
         label: "Dinner",
         icon: "meal",
         tone: "meal",
         title: "Vegan Bistro Jangara",
-        callout: "Arrive around 6:00 PM. Last order is 9:00 PM.",
+        callout: "Meet around 6:30 PM. Last order is 9:00 PM.",
         bullets: [
-          "Take the train to Harajuku after work.",
+          "Pepito travels from the hotel; Bianca travels from Nijubashimae after the run.",
           "Pass I’m donut? Gluten-Free & Vegan; use only the storefront marked グルテンフリー＆ヴィーガン.",
         ],
         links: [
@@ -483,8 +491,8 @@ export const tokyoDays: TokyoDay[] = [
     day: 6,
     date: "Tuesday, August 11",
     shortDate: "Aug 11",
-    subtitle: "Mountain Day: Nezu, Ginza, and ASICS run",
-    area: "Nezu · Akihabara · Ginza · Marunouchi",
+    subtitle: "Mountain Day: Nezu, Akihabara, and Ginza",
+    area: "Nezu · Akihabara · Ginza",
     lunch: [maps("KOMEDA is ☐", "KOMEDA is Higashi Ginza")],
     dinner: [maps("2foods Ginza Loft", "2foods Ginza Loft")],
     dessert: [
@@ -492,6 +500,13 @@ export const tokyoDays: TokyoDay[] = [
       maps("Tsuboyaki-imo", "Ginza Tsuboyaki Imo"),
     ],
     timeline: [
+      {
+        label: "5:00 AM run",
+        icon: "run",
+        title: "Shinobazu Pond → Nezu Shrine",
+        description: "About 5 km, returning to the hotel.",
+        links: [maps("Nezu Shrine", "Nezu Shrine")],
+      },
       {
         label: "Morning",
         icon: "walk",
@@ -539,32 +554,13 @@ export const tokyoDays: TokyoDay[] = [
           "Yodobashi Akiba, Akihabara UDX, Ginza Mitsukoshi, Ginza Loft, or GINZA SIX.",
       },
       {
-        label: "4:30 PM · Gear test + run",
-        icon: "run",
-        title: "ASICS RUN TOKYO MARUNOUCHI",
-        description: "Rent shoes, use the run station, and run one 5 km Imperial Palace loop.",
-        callout: "Arrive by 4:30 PM. Holiday last entry is 6:00 PM; the station closes at 7:00 PM.",
-        bullets: [
-          "Ask staff which models and sizes are available; rentals cannot be reserved.",
-          "Return to shower and change before closing.",
-          "Check the heat index first. Shorten or skip the loop if conditions are unsafe.",
-        ],
-        links: [
-          maps("Open in Maps", "ASICS RUN TOKYO MARUNOUCHI"),
-          link(
-            "Hours and rentals",
-            "https://www.asics.com/jp/ja-jp/mk/store/asicsruntokyo-marunouchi"
-          ),
-        ],
-      },
-      {
         label: "Dinner",
         icon: "meal",
         tone: "meal",
         title: "2foods Ginza Loft",
         description:
           "Casual, fully plant-based burgers, curry, omurice, doughnuts, and desserts.",
-        callout: "Aim for 7:15 PM. Last order is 8:15 PM.",
+        callout: "Last order is 8:15 PM.",
         bullets: [
           "After dinner, KITTE Garden has a free night view until 10:00 PM, weather permitting.",
         ],
@@ -790,9 +786,9 @@ export const morningRuns = [
   { day: "Day 1 · Thu Aug 6", time: "—", route: "No run — arrival morning", distance: "—" },
   {
     day: "Day 2 · Fri Aug 7",
-    time: "5:00 AM",
-    route: "Shinobazu Pond + Ueno Park loop",
-    distance: "About 4 km",
+    time: "5:00 PM",
+    route: "ASICS Marunouchi → Imperial Palace loop",
+    distance: "About 5 km",
   },
   {
     day: "Day 3 · Sat Aug 8",
@@ -814,8 +810,8 @@ export const morningRuns = [
   },
   {
     day: "Day 6 · Tue Aug 11",
-    time: "5:00 PM",
-    route: "ASICS Marunouchi → Imperial Palace loop",
+    time: "5:00 AM",
+    route: "Shinobazu Pond → Nezu Shrine → hotel",
     distance: "About 5 km",
   },
   {
