@@ -172,8 +172,8 @@ export const tokyoDays: TokyoDay[] = [
     day: 2,
     date: "Friday, August 7",
     shortDate: "Aug 7",
-    subtitle: "Asakusa, work, and Bianca’s ASICS run",
-    area: "Asakusa · Marunouchi · Harajuku",
+    subtitle: "Morning work, ASICS run, and Asakusa",
+    area: "Marunouchi · Asakusa · Harajuku",
     lunch: [maps("Marugoto Vegan Dining", "Marugoto Vegan Dining Asakusa")],
     dinner: [maps("Vegan Bistro Jangara", "Vegan Bistro Jangara Harajuku")],
     dessert: [
@@ -183,10 +183,37 @@ export const tokyoDays: TokyoDay[] = [
     ],
     timeline: [
       {
-        label: "Morning",
+        label: "Pepito · 6:00–9:00 AM",
+        icon: "work",
+        tone: "work",
+        title: "Hotel work block",
+        description: "Pepito works in the hotel room while Bianca goes to ASICS.",
+      },
+      {
+        label: "Bianca · 6:30 AM",
+        icon: "run",
+        title: "ASICS RUN TOKYO MARUNOUCHI",
+        description: "Rent shoes, then run one 5 km Imperial Palace loop around 7:00 AM.",
+        callout: "The run station opens at 6:30 AM; the retail store opens at 11:00 AM.",
+        bullets: [
+          "Have a light snack before leaving.",
+          "Ask staff which models and sizes are available; rentals cannot be reserved.",
+          "Check the heat index first. Shorten the run if conditions are unsafe.",
+          "Return to shower and change, then meet Pepito in Asakusa around 9:30 AM.",
+        ],
+        links: [
+          maps("Open in Maps", "ASICS RUN TOKYO MARUNOUCHI"),
+          link(
+            "Hours and rentals",
+            "https://www.asics.com/jp/ja-jp/mk/store/asicsruntokyo-marunouchi"
+          ),
+        ],
+      },
+      {
+        label: "Meet · 9:30 AM",
         icon: "walk",
         bullets: [
-          "Walk through Kaminarimon, Nakamise, Senso-ji, and Asakusa Shrine before the crowds and heat build.",
+          "Meet in Asakusa, then walk through Kaminarimon, Nakamise, Senso-ji, and Asakusa Shrine.",
           "Return via Denboin Street. After 9:00 AM, visit the free 8F viewpoint at the Asakusa Culture Tourist Information Center.",
           "Continue to Imado Shrine to make a shared wish.",
         ],
@@ -220,40 +247,18 @@ export const tokyoDays: TokyoDay[] = [
         ],
       },
       {
-        label: "Work · 2:30–5:30 PM",
-        icon: "work",
-        tone: "work",
-        title: "Pepito: hotel work block",
-        description: "Pepito returns to the hotel. Bianca continues to Marunouchi.",
-      },
-      {
-        label: "Bianca · 4:30 PM",
-        icon: "run",
-        title: "ASICS RUN TOKYO MARUNOUCHI",
-        description: "Rent shoes, then run one 5 km Imperial Palace loop around 5:00 PM.",
-        callout: "Cool down indoors at KITTE or Marunouchi Building before the run.",
-        bullets: [
-          "Ask staff which models and sizes are available; rentals cannot be reserved.",
-          "Return to shower and change, then take the Chiyoda Line from Nijubashimae to Meiji-jingumae.",
-          "Check the heat index first. Shorten or skip the loop if conditions are unsafe.",
-        ],
-        links: [
-          maps("Open in Maps", "ASICS RUN TOKYO MARUNOUCHI"),
-          link(
-            "Hours and rentals",
-            "https://www.asics.com/jp/ja-jp/mk/store/asicsruntokyo-marunouchi"
-          ),
-          maps("KITTE", "KITTE Marunouchi"),
-        ],
+        label: "Afternoon cool down",
+        icon: "cool",
+        description: "Asakusa ROX, EKIMISE, or the hotel. Head to Harajuku later.",
       },
       {
         label: "Dinner",
         icon: "meal",
         tone: "meal",
         title: "Vegan Bistro Jangara",
-        callout: "Meet around 6:30 PM. Last order is 9:00 PM.",
+        callout: "Arrive around 6:00 PM. Last order is 9:00 PM.",
         bullets: [
-          "Pepito travels from the hotel; Bianca travels from Nijubashimae after the run.",
+          "Travel to Harajuku together.",
           "Pass I’m donut? Gluten-Free & Vegan; use only the storefront marked グルテンフリー＆ヴィーガン.",
         ],
         links: [
@@ -786,7 +791,7 @@ export const morningRuns = [
   { day: "Day 1 · Thu Aug 6", time: "—", route: "No run — arrival morning", distance: "—" },
   {
     day: "Day 2 · Fri Aug 7",
-    time: "5:00 PM",
+    time: "7:00 AM",
     route: "ASICS Marunouchi → Imperial Palace loop",
     distance: "About 5 km",
   },
