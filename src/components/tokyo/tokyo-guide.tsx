@@ -325,7 +325,7 @@ function ReferenceAccordion() {
         <AccordionTrigger className="min-h-14 py-3 text-base hover:no-underline">
           <span className="flex items-center gap-2">
             <Activity className="size-4 text-primary" />
-            Morning runs
+            Runs
           </span>
         </AccordionTrigger>
         <AccordionContent className="pb-4">
@@ -336,6 +336,7 @@ function ReferenceAccordion() {
                   <p className="font-semibold">{run.day}</p>
                   <Badge variant="outline">{run.distance}</Badge>
                 </div>
+                <p className="mt-1 text-xs font-medium text-primary">{run.time}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{run.route}</p>
               </div>
             ))}

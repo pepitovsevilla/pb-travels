@@ -483,8 +483,8 @@ export const tokyoDays: TokyoDay[] = [
     day: 6,
     date: "Tuesday, August 11",
     shortDate: "Aug 11",
-    subtitle: "Mountain Day: Nezu, Akihabara, and Ginza",
-    area: "Nezu · Akihabara · Ginza",
+    subtitle: "Mountain Day: Nezu, Ginza, and ASICS run",
+    area: "Nezu · Akihabara · Ginza · Marunouchi",
     lunch: [maps("KOMEDA is ☐", "KOMEDA is Higashi Ginza")],
     dinner: [maps("2foods Ginza Loft", "2foods Ginza Loft")],
     dessert: [
@@ -492,13 +492,6 @@ export const tokyoDays: TokyoDay[] = [
       maps("Tsuboyaki-imo", "Ginza Tsuboyaki Imo"),
     ],
     timeline: [
-      {
-        label: "5:00 AM run",
-        icon: "run",
-        title: "Shinobazu Pond → Nezu Shrine",
-        description: "About 5 km, returning to the hotel.",
-        links: [maps("Nezu Shrine", "Nezu Shrine")],
-      },
       {
         label: "Morning",
         icon: "walk",
@@ -528,17 +521,15 @@ export const tokyoDays: TokyoDay[] = [
         ],
       },
       {
-        label: "Afternoon",
+        label: "Early afternoon",
         icon: "dessert",
         bullets: [
           "The Vegan Marshmallooow is on Ginza Mitsukoshi B2. Eat cream-filled items in the ninth-floor rest area.",
           "Ginza Tsuboyaki-imo serves roasted sweet potato.",
-          "For a free sunset or night view, visit KITTE Garden beside Tokyo Station. It closes at 10:00 PM and may close in bad weather.",
         ],
         links: [
           maps("Marshmallooow", "The Vegan Marshmallooow Ginza"),
           maps("Tsuboyaki-imo", "Ginza Tsuboyaki Imo"),
-          maps("KITTE Garden", "KITTE Garden Tokyo"),
         ],
       },
       {
@@ -548,14 +539,39 @@ export const tokyoDays: TokyoDay[] = [
           "Yodobashi Akiba, Akihabara UDX, Ginza Mitsukoshi, Ginza Loft, or GINZA SIX.",
       },
       {
+        label: "4:30 PM · Gear test + run",
+        icon: "run",
+        title: "ASICS RUN TOKYO MARUNOUCHI",
+        description: "Rent shoes, use the run station, and run one 5 km Imperial Palace loop.",
+        callout: "Arrive by 4:30 PM. Holiday last entry is 6:00 PM; the station closes at 7:00 PM.",
+        bullets: [
+          "Ask staff which models and sizes are available; rentals cannot be reserved.",
+          "Return to shower and change before closing.",
+          "Check the heat index first. Shorten or skip the loop if conditions are unsafe.",
+        ],
+        links: [
+          maps("Open in Maps", "ASICS RUN TOKYO MARUNOUCHI"),
+          link(
+            "Hours and rentals",
+            "https://www.asics.com/jp/ja-jp/mk/store/asicsruntokyo-marunouchi"
+          ),
+        ],
+      },
+      {
         label: "Dinner",
         icon: "meal",
         tone: "meal",
         title: "2foods Ginza Loft",
         description:
           "Casual, fully plant-based burgers, curry, omurice, doughnuts, and desserts.",
-        callout: "Last order is 8:15 PM.",
-        links: [maps("Open in Maps", "2foods Ginza Loft")],
+        callout: "Aim for 7:15 PM. Last order is 8:15 PM.",
+        bullets: [
+          "After dinner, KITTE Garden has a free night view until 10:00 PM, weather permitting.",
+        ],
+        links: [
+          maps("Open in Maps", "2foods Ginza Loft"),
+          maps("KITTE Garden", "KITTE Garden Tokyo"),
+        ],
       },
     ],
   },
@@ -771,39 +787,46 @@ export const reservations = [
 ]
 
 export const morningRuns = [
-  { day: "Day 1 · Thu Aug 6", route: "No run — arrival morning", distance: "—" },
+  { day: "Day 1 · Thu Aug 6", time: "—", route: "No run — arrival morning", distance: "—" },
   {
     day: "Day 2 · Fri Aug 7",
+    time: "5:00 AM",
     route: "Shinobazu Pond + Ueno Park loop",
     distance: "About 4 km",
   },
   {
     day: "Day 3 · Sat Aug 8",
+    time: "5:00 AM",
     route: "Kuramae → Sumida River Terrace → Asakusa → hotel",
     distance: "About 6 km",
   },
   {
     day: "Day 4 · Sun Aug 9",
+    time: "5:00 AM",
     route: "Ueno Park → Yanaka Cemetery → hotel",
     distance: "About 6 km",
   },
   {
     day: "Day 5 · Mon Aug 10",
+    time: "5:00 AM",
     route: "Akihabara → Kanda Myojin → Shinobazu Pond → hotel",
     distance: "About 5 km",
   },
   {
     day: "Day 6 · Tue Aug 11",
-    route: "Shinobazu Pond → Nezu Shrine → hotel",
+    time: "5:00 PM",
+    route: "ASICS Marunouchi → Imperial Palace loop",
     distance: "About 5 km",
   },
   {
     day: "Day 7 · Wed Aug 12",
+    time: "5:00 AM",
     route: "Ueno Park + Shinobazu Pond short loop",
     distance: "About 3 km",
   },
   {
     day: "Day 8 · Thu Aug 13",
+    time: "5:00 AM",
     route: "Shinobazu Pond short loop before checkout",
     distance: "About 3 km",
   },
