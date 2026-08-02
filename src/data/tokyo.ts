@@ -70,6 +70,7 @@ const instagramByPlace: Record<string, string> = {
   "Vegan Izakaya Nowhere":
     "https://www.instagram.com/veganizakayanowhere/",
   "marbre vegan Shinjuku": "https://www.instagram.com/marbre_vegan/",
+  "AIN SOPH. Ginza": "https://www.instagram.com/ainsoph.ginza/",
   "KOMEDA is Higashi Ginza": "https://www.instagram.com/komeda_is/",
   "T's Tantan Tokyo Station": "https://www.instagram.com/ts_tantan_jp/",
   "The Vegan Marshmallooow Ginza":
@@ -540,6 +541,7 @@ export const tokyoDays: TokyoDay[] = [
     ],
     dinner: [maps("2foods Ginza Loft", "2foods Ginza Loft")],
     dessert: [
+      maps("AIN SOPH. Ginza", "AIN SOPH. Ginza"),
       maps("Marshmallooow", "The Vegan Marshmallooow Ginza"),
       maps("Tsuboyaki-imo", "Ginza Tsuboyaki Imo"),
     ],
@@ -585,10 +587,12 @@ export const tokyoDays: TokyoDay[] = [
         label: "Early afternoon",
         icon: "dessert",
         bullets: [
+          "Start at AIN SOPH. Ginza’s patisserie for vegan pudding, tiramisu, or raisin sandwiches.",
           "The Vegan Marshmallooow is on Ginza Mitsukoshi B2. Eat cream-filled items in the ninth-floor rest area.",
           "Ginza Tsuboyaki-imo serves roasted sweet potato.",
         ],
         links: [
+          maps("AIN SOPH. Ginza", "AIN SOPH. Ginza"),
           maps("Marshmallooow", "The Vegan Marshmallooow Ginza"),
           maps("Tsuboyaki-imo", "Ginza Tsuboyaki Imo"),
         ],
@@ -793,6 +797,11 @@ export const pastryStops = [
     area: "Harajuku / Omotesando",
     place: maps("I’m donut? Gluten-Free & Vegan", "I'm donut Gluten-Free Vegan 5-53-4 Jingumae"),
     note: "Only the グルテンフリー＆ヴィーガン branch at 5-53-4 Jingumae",
+  },
+  {
+    area: "Ginza",
+    place: maps("AIN SOPH. Ginza", "AIN SOPH. Ginza"),
+    note: "Vegan pudding, tiramisu, and raisin sandwiches",
   },
   {
     area: "Ginza",
