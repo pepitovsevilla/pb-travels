@@ -669,8 +669,9 @@ export const tokyoDays: TokyoDay[] = [
       {
         label: "Dessert",
         icon: "dessert",
-        title: "Shochikuen Cafe",
-        description: "Choose cake or tiramisu.",
+        title: "Shochikuen Cafe · Ueno lunch only",
+        description:
+          "Choose cake or tiramisu after T’s Tantan Ueno. Otherwise stay west for dinner.",
         links: [maps("Open in Maps", "Shochikuen Cafe Asakusa")],
       },
       {
