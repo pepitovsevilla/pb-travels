@@ -78,6 +78,8 @@ const instagramByPlace: Record<string, string> = {
   "2foods Ginza Loft": "https://www.instagram.com/2foods.official/",
   "NEOShinjuku Atsushi":
     "https://www.instagram.com/neoshinjukuatsushi/",
+  "Tsukemen Zuppa Suidobashi":
+    "https://www.instagram.com/zuppa.suidoubashi/",
   "Zen Okonomiyaki Shinjuku": "https://www.instagram.com/okonomi.zen/",
   "Shochikuen Cafe Asakusa":
     "https://www.instagram.com/shochikuen_vegan/",
@@ -606,6 +608,7 @@ export const tokyoDays: TokyoDay[] = [
     area: "Ueno · Shinjuku",
     lunch: [
       maps("NEOShinjuku Atsushi", "NEOShinjuku Atsushi"),
+      maps("Tsukemen Zuppa", "Tsukemen Zuppa Suidobashi"),
       maps("T’s Tantan Ueno", "T's Tantan Ecute Ueno"),
     ],
     dinner: [maps("Zen", "Zen Okonomiyaki Shinjuku")],
@@ -627,14 +630,17 @@ export const tokyoDays: TokyoDay[] = [
         label: "Lunch",
         icon: "meal",
         tone: "meal",
-        title: "NEOShinjuku Atsushi or T’s Tantan Ueno",
-        callout: "Aim for NEO around 1:30 PM.",
+        title: "NEO, Tsukemen Zuppa, or T’s Tantan Ueno",
+        callout:
+          "Aim for NEO around 1:30 PM. Zuppa is near Suidobashi and opens at 11:00 AM.",
         bullets: [
           "At NEO, choose tantanmen, burgers, gyoza, or vegan karaage.",
+          "At Zuppa, order from the vegan menu; check its Instagram for irregular closures.",
           "If the meeting runs long, eat at T’s Tantan in Ueno.",
         ],
         links: [
           maps("NEOShinjuku Atsushi", "NEOShinjuku Atsushi"),
+          maps("Tsukemen Zuppa", "Tsukemen Zuppa Suidobashi"),
           maps("T’s Tantan Ueno", "T's Tantan Ecute Ueno"),
         ],
       },
