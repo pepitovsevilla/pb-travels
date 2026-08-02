@@ -63,6 +63,8 @@ const instagramByPlace: Record<string, string> = {
     "https://www.instagram.com/universalbakes_tokyo/",
   "THE NUTS EXCHANGE Tomigaya":
     "https://www.instagram.com/the_nuts_exchange/",
+  "All-Day Dining OASIS GARDEN":
+    "https://www.instagram.com/princegallerytokyokioicho/",
   "MORETHAN BAKERY Shinjuku":
     "https://www.instagram.com/morethan_bakery/",
   "AIN SOPH Journey Shinjuku":
@@ -383,9 +385,9 @@ export const tokyoDays: TokyoDay[] = [
     date: "Sunday, August 9",
     shortDate: "Aug 9",
     subtitle: "Sunday pastries and CEO dinner",
-    area: "Shinjuku · Tomigaya",
+    area: "Shinjuku · Tomigaya · Kioicho",
     lunch: [maps("THE NUTS EXCHANGE", "THE NUTS EXCHANGE Tomigaya")],
-    dinner: [],
+    dinner: [maps("OASIS GARDEN", "All-Day Dining OASIS GARDEN")],
     dessert: [maps("MORETHAN BAKERY", "MORETHAN BAKERY Shinjuku")],
     timeline: [
       {
@@ -434,7 +436,17 @@ export const tokyoDays: TokyoDay[] = [
         label: "Dinner",
         icon: "meal",
         tone: "meal",
-        title: "CEO dinner",
+        title: "CEO dinner · OASIS GARDEN",
+        description: "36F, The Prince Gallery Tokyo Kioicho.",
+        callout:
+          "Smart casual. Ask the host or restaurant to note two vegan meals in advance.",
+        links: [
+          maps("Open in Maps", "All-Day Dining OASIS GARDEN"),
+          link(
+            "Restaurant details",
+            "https://www.princehotels.co.jp/kioicho/restaurant/garden/"
+          ),
+        ],
       },
     ],
   },
@@ -888,7 +900,10 @@ export const tripDetails = [
   { label: "Check-out", value: "Thursday, August 13 before 10:00 AM" },
   { label: "Arrival", value: "Manila 12:40 AM → Narita 6:10 AM" },
   { label: "Departure", value: "Narita 7:40 PM → Manila 11:40 PM" },
-  { label: "CEO dinner", value: "Sunday, August 9 evening" },
+  {
+    label: "CEO dinner",
+    value: "Sunday, August 9 · OASIS GARDEN, The Prince Gallery Tokyo Kioicho",
+  },
   { label: "Colleague meeting", value: "Wednesday, August 12 morning, likely around Ueno" },
 ]
 
