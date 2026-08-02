@@ -56,6 +56,7 @@ const instagramByPlace: Record<string, string> = {
     "https://www.instagram.com/im.donut.gluten.free/",
   "Jikasei MENSHO Shibuya PARCO":
     "https://www.instagram.com/menya_shono/",
+  "Vegan Soba Tokyo Ayler": "https://www.instagram.com/__ayler__/",
   "Tokyo Vegan Bakes Shimokitazawa":
     "https://www.instagram.com/tokyoveganbakes/",
   "Universal Bakes and Cafe":
@@ -252,6 +253,21 @@ export const tokyoDays: TokyoDay[] = [
         description: "Asakusa ROX, EKIMISE, or the hotel. Head to Harajuku later.",
       },
       {
+        label: "Harajuku option",
+        icon: "run",
+        title: "Nike Harajuku · NSRL Form",
+        description: "Free Nike Member form analysis: a two-minute treadmill run and about a 15-minute consult.",
+        callout: "Reserve first. Wear your usual running shoes and non-reflective running clothes.",
+        bullets: ["Jangara is next door, so use a late-afternoon booking before dinner."],
+        links: [
+          maps("Open in Maps", "NIKE HARAJUKU"),
+          link(
+            "Reserve NSRL Form",
+            "https://www.nike.com/jp/nike-sport-research-lab-form/locations/nike-harajuku"
+          ),
+        ],
+      },
+      {
         label: "Dinner",
         icon: "meal",
         tone: "meal",
@@ -275,7 +291,10 @@ export const tokyoDays: TokyoDay[] = [
     shortDate: "Aug 8",
     subtitle: "Shimokitazawa, Shibuya, and a summer evening",
     area: "Shimokitazawa · Shibuya",
-    lunch: [maps("Jikasei MENSHO", "Jikasei MENSHO Shibuya PARCO")],
+    lunch: [
+      maps("Jikasei MENSHO", "Jikasei MENSHO Shibuya PARCO"),
+      maps("Ayler option", "Vegan Soba Tokyo Ayler"),
+    ],
     dinner: [maps("Masaka", "Vegan Izakaya Masaka Shibuya")],
     dessert: [
       maps("Tokyo Vegan Bakes", "Tokyo Vegan Bakes Shimokitazawa"),
@@ -306,10 +325,13 @@ export const tokyoDays: TokyoDay[] = [
         label: "Lunch",
         icon: "meal",
         tone: "meal",
-        title: "Jikasei MENSHO",
-        description: "B1F of Shibuya PARCO. Order vegan tantanmen or spicy vegan miso ramen.",
-        callout: "Aim for 1:30 PM, after the main lunch rush. A short line is still possible.",
-        links: [maps("Open in Maps", "Jikasei MENSHO Shibuya PARCO")],
+        title: "Jikasei MENSHO or Vegan Soba Tokyo Ayler",
+        description: "Keep Jikasei as the Shibuya default; Ayler is a fully vegan soba option near the morning Shimokitazawa stops.",
+        callout: "Use Ayler only if its Instagram confirms Saturday daytime service; otherwise aim for Jikasei around 1:30 PM.",
+        links: [
+          maps("Jikasei", "Jikasei MENSHO Shibuya PARCO"),
+          maps("Ayler", "Vegan Soba Tokyo Ayler"),
+        ],
       },
       {
         label: "Afternoon",
@@ -422,8 +444,8 @@ export const tokyoDays: TokyoDay[] = [
     area: "Shinjuku · Skytree",
     lunch: [maps("AIN SOPH. Journey", "AIN SOPH Journey Shinjuku")],
     dinner: [
-      maps("Vegan Izakaya Nowhere", "Vegan Izakaya Nowhere"),
-      maps("Masaka backup", "Vegan Izakaya Masaka Shibuya"),
+      maps("Nowhere option", "Vegan Izakaya Nowhere"),
+      maps("Masaka option", "Vegan Izakaya Masaka Shibuya"),
     ],
     dessert: [maps("marbre vegan", "marbre vegan Shinjuku")],
     timeline: [
@@ -479,14 +501,13 @@ export const tokyoDays: TokyoDay[] = [
         label: "Dinner",
         icon: "meal",
         tone: "meal",
-        title: "Vegan Izakaya Nowhere",
-        badge: "Reserve 6:30 PM",
-        description: "Near Skytree. It opens at 5:00 PM on Monday.",
-        bullets: ["If Nowhere is unavailable, repeat Masaka in Shibuya."],
+        title: "Vegan Izakaya Nowhere or Masaka",
+        description: "Choose Nowhere for a separate izakaya experience near Skytree, or Masaka for a Shibuya repeat.",
+        callout: "Reserve Nowhere for 6:30 PM only if you choose it. Masaka does not take reservations.",
         links: [
-          maps("Open in Maps", "Vegan Izakaya Nowhere"),
-          link("Official site", "https://veganizakayanowhere.com/"),
-          maps("Masaka backup", "Vegan Izakaya Masaka Shibuya"),
+          maps("Nowhere", "Vegan Izakaya Nowhere"),
+          link("Nowhere official site", "https://veganizakayanowhere.com/"),
+          maps("Masaka", "Vegan Izakaya Masaka Shibuya"),
         ],
       },
     ],
@@ -776,11 +797,6 @@ export const reservations = [
     ],
   },
   {
-    title: "Vegan Izakaya Nowhere",
-    meta: "Monday, August 10 · 6:30 PM dinner",
-    links: [link("Official site", "https://veganizakayanowhere.com/")],
-  },
-  {
     title: "Zen",
     meta: "Wednesday, August 12 · 6:30 PM dinner",
     links: [link("Official site", "https://zen-shinjuku.com/en")],
@@ -848,6 +864,11 @@ export const referenceMaps = [
     "https://www.google.com/maps/d/viewer?mid=1DZa9FPxP4NEecF3sXLAhtooC40B25X4&usp=sharing"
   ),
   link("Additional map reference", "https://maps.app.goo.gl/fSFT8q3fmAKtsWor6"),
+  maps("Sneaker laundry · Pierrot Taito", "Coin Laundry Pierrot Taito"),
+  link(
+    "Sneaker laundry · live machine status",
+    "https://laundry.senkaq.com/shop/tokyo/taito-ku/2722/"
+  ),
 ]
 
 export const tokyoMap = {
