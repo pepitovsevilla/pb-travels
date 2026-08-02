@@ -459,6 +459,19 @@ export const tokyoDays: TokyoDay[] = [
         links: [maps("Kanda Myojin", "Kanda Myojin")],
       },
       {
+        label: "6:30 AM laundry",
+        icon: "luggage",
+        title: "Sneakers and clothing · Pierrot Taito",
+        description: "About 10 minutes on foot from the hotel. Check machine status before leaving.",
+        links: [
+          maps("Open in Maps", "Coin Laundry Pierrot Taito"),
+          link(
+            "Live machine status",
+            "https://laundry.senkaq.com/shop/tokyo/taito-ku/2722/"
+          ),
+        ],
+      },
+      {
         label: "Morning",
         icon: "walk",
         bullets: [
