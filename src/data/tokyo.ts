@@ -521,7 +521,10 @@ export const tokyoDays: TokyoDay[] = [
     shortDate: "Aug 11",
     subtitle: "Mountain Day: Nezu, Akihabara, and Ginza",
     area: "Nezu · Akihabara · Ginza",
-    lunch: [maps("KOMEDA is ☐", "KOMEDA is Higashi Ginza")],
+    lunch: [
+      maps("KOMEDA is ☐", "KOMEDA is Higashi Ginza"),
+      maps("Menya Shichisai", "Menya Shichisai Hatchobori"),
+    ],
     dinner: [maps("2foods Ginza Loft", "2foods Ginza Loft")],
     dessert: [
       maps("Marshmallooow", "The Vegan Marshmallooow Ginza"),
@@ -541,7 +544,7 @@ export const tokyoDays: TokyoDay[] = [
         bullets: [
           "Visit Nezu Shrine early and make a shared wish.",
           "Continue to Kanda Myojin before lunch if the heat and timing allow.",
-          "Visit Akihabara after Kanda Myojin, then continue to Higashi-Ginza.",
+          "Visit Akihabara after Kanda Myojin, then continue to Hatchobori or Higashi-Ginza for lunch.",
         ],
         links: [
           maps("Nezu Shrine", "Nezu Shrine"),
@@ -552,14 +555,16 @@ export const tokyoDays: TokyoDay[] = [
         label: "Lunch",
         icon: "meal",
         tone: "meal",
-        title: "KOMEDA is ☐ Higashi-Ginza",
-        description: "Fully plant-based café lunch.",
+        title: "KOMEDA is ☐ or Menya Shichisai",
+        description: "KOMEDA is fully plant-based; Menya Shichisai has a vegan ramen option.",
         callout: "Arrive around 11:30 AM before the Mountain Day rush.",
         bullets: [
-          "If KOMEDA is ☐ closes, eat at T’s Tantan Tokyo Station, then continue to Ginza.",
+          "Choose the vegan ramen at Menya Shichisai, then continue to Ginza.",
+          "If both are unavailable, eat at T’s Tantan Tokyo Station, then continue to Ginza.",
         ],
         links: [
           maps("KOMEDA is ☐", "KOMEDA is Higashi Ginza"),
+          maps("Menya Shichisai", "Menya Shichisai Hatchobori"),
           maps("T’s Tantan backup", "T's Tantan Tokyo Station"),
         ],
       },
