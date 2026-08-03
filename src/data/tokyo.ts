@@ -134,7 +134,21 @@ export const tokyoDays: TokyoDay[] = [
         bullets: [
           "Flight lands at Narita at 6:10 AM.",
           "Take the Skyliner to Nippori, then the Yamanote Line to Ueno.",
-          "Leave your luggage at the hotel before lunch.",
+          "Leave your luggage at the hotel, then use the sneaker laundry while waiting for check-in.",
+        ],
+      },
+      {
+        label: "Before lunch",
+        icon: "luggage",
+        title: "Sneaker laundry · Pierrot Taito",
+        description: "Wash and dry sneakers while waiting for check-in. Wear slides while they are in the machine.",
+        callout: "About 10 minutes on foot from the hotel. Check machine status before leaving.",
+        links: [
+          maps("Open in Maps", "Coin Laundry Pierrot Taito"),
+          link(
+            "Live machine status",
+            "https://laundry.senkaq.com/shop/tokyo/taito-ku/2722/"
+          ),
         ],
       },
       {
@@ -470,19 +484,6 @@ export const tokyoDays: TokyoDay[] = [
         title: "Akihabara → Kanda Myojin → Shinobazu",
         description: "About 5 km, returning to the hotel.",
         links: [maps("Kanda Myojin", "Kanda Myojin")],
-      },
-      {
-        label: "6:30 AM laundry",
-        icon: "luggage",
-        title: "Sneakers and clothing · Pierrot Taito",
-        description: "About 10 minutes on foot from the hotel. Check machine status before leaving.",
-        links: [
-          maps("Open in Maps", "Coin Laundry Pierrot Taito"),
-          link(
-            "Live machine status",
-            "https://laundry.senkaq.com/shop/tokyo/taito-ku/2722/"
-          ),
-        ],
       },
       {
         label: "Morning",
