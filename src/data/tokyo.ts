@@ -133,7 +133,9 @@ export const tokyoDays: TokyoDay[] = [
         title: "Narita to Ueno",
         bullets: [
           "Flight lands at Narita at 6:10 AM.",
-          "Take the Skyliner to Nippori, then the Yamanote Line to Ueno.",
+          "At the Keisei counter, ask for the next direct regular train to Keisei-Ueno.",
+          "Choose a Rapid Limited Express or Limited Express. Do not transfer at Nippori.",
+          "Use Skyliner only if you are exhausted or the next direct regular train is inconvenient.",
           "Leave your luggage at the hotel, then use the sneaker laundry while waiting for check-in.",
         ],
       },
