@@ -78,6 +78,8 @@ const instagramByPlace: Record<string, string> = {
   "The Vegan Marshmallooow Ginza":
     "https://www.instagram.com/theveganmarshmallooow/",
   "Ginza Tsuboyaki Imo": "https://www.instagram.com/tsubo_yakiimo/",
+  "te cor gentil vegan bakes Azabu Juban":
+    "https://www.instagram.com/tecorgentil/",
   "2foods Ginza Loft": "https://www.instagram.com/2foods.official/",
   "NEOShinjuku Atsushi":
     "https://www.instagram.com/neoshinjukuatsushi/",
@@ -559,6 +561,7 @@ export const tokyoDays: TokyoDay[] = [
       maps("AIN SOPH. Ginza", "AIN SOPH. Ginza"),
       maps("Marshmallooow", "The Vegan Marshmallooow Ginza"),
       maps("Tsuboyaki-imo", "Ginza Tsuboyaki Imo"),
+      maps("Te cor gentil · detour", "te cor gentil vegan bakes Azabu Juban"),
     ],
     timeline: [
       {
@@ -605,11 +608,13 @@ export const tokyoDays: TokyoDay[] = [
           "Start at AIN SOPH. Ginza’s patisserie for vegan pudding, tiramisu, or raisin sandwiches.",
           "The Vegan Marshmallooow is on Ginza Mitsukoshi B2. Eat cream-filled items in the ninth-floor rest area.",
           "Ginza Tsuboyaki-imo serves roasted sweet potato.",
+          "Te cor gentil is a separate Azabu-Juban detour. Choose it instead of a Ginza pastry stop.",
         ],
         links: [
           maps("AIN SOPH. Ginza", "AIN SOPH. Ginza"),
           maps("Marshmallooow", "The Vegan Marshmallooow Ginza"),
           maps("Tsuboyaki-imo", "Ginza Tsuboyaki Imo"),
+          maps("Te cor gentil · detour", "te cor gentil vegan bakes Azabu Juban"),
         ],
       },
       {
@@ -828,6 +833,11 @@ export const pastryStops = [
     area: "Ginza",
     place: maps("Ginza Tsuboyaki-imo", "Ginza Tsuboyaki Imo"),
     note: "Hot or chilled roasted sweet potato",
+  },
+  {
+    area: "Azabu-Juban",
+    place: maps("Te cor gentil", "te cor gentil vegan bakes Azabu Juban"),
+    note: "Fully vegan bakery; separate detour from the Ginza route",
   },
   {
     area: "Hiroo / Ebisu",
