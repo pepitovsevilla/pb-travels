@@ -132,13 +132,27 @@ export const tokyoDays: TokyoDay[] = [
       {
         label: "Arrival",
         icon: "flight",
-        title: "Narita to Ueno",
+        title: "Narita Terminal 3 → hotel",
+        description: "Take a direct Keisei train to Keisei-Ueno, then walk about seven minutes to the hotel.",
+        callout: "Regular train: ¥1,030 cash / ¥1,025 IC. Do not take the bus.",
         bullets: [
           "Flight lands at Narita at 6:10 AM.",
-          "At the Keisei counter, ask for the next direct regular train to Keisei-Ueno.",
-          "Choose a Rapid Limited Express or Limited Express. Do not transfer at Nippori.",
-          "Use Skyliner only if you are exhausted or the next direct regular train is inconvenient.",
+          "From Terminal 3 arrivals, exit North Exit 2 and follow the red Train corridor to Airport Terminal 2·3 Station (about 10 minutes).",
+          "At B1, use the Keisei counter or machine. Show: ‘京成上野まで、スカイライナー以外の直通電車をお願いします。’",
+          "Board a Rapid Limited Express or Limited Express whose final destination is Keisei-Ueno. Stay on until the last stop; do not transfer at Nippori.",
+          "Skyliner also goes direct to Keisei-Ueno. Use it only if you want reserved seats or the next regular train is inconvenient.",
           "Leave your luggage at the hotel, then use the sneaker laundry while waiting for check-in.",
+        ],
+        links: [
+          link(
+            "Terminal 3 → station guide",
+            "https://www.narita-airport.jp/en/access/train/railway-route-3/"
+          ),
+          link(
+            "Keisei route and fare",
+            "https://www.keisei.co.jp/keisei/tetudou/skyliner/us/traffic/main_fares.php"
+          ),
+          maps("Hotel walk", "Tosei Hotel Cocone Ueno Okachimachi"),
         ],
       },
       {
