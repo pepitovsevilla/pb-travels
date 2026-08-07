@@ -196,6 +196,8 @@ function FoodValue({
 }
 
 function ReferenceAccordion() {
+  const plannedDays = tokyoDays.filter((day) => day.status !== "completed")
+
   return (
     <Accordion
       multiple
@@ -210,7 +212,7 @@ function ReferenceAccordion() {
         </AccordionTrigger>
         <AccordionContent className="pb-4">
           <div className="space-y-3">
-            {tokyoDays.map((day) => (
+            {plannedDays.map((day) => (
               <div
                 key={day.id}
                 className="rounded-xl border bg-background/65 p-3.5"
@@ -523,6 +525,10 @@ function DaySection({ day }: { day: (typeof tokyoDays)[number] }) {
       <header className="mb-6 px-1">
         <div className="flex flex-wrap items-center gap-2">
           <Badge className="rounded-md">Day {day.day}</Badge>
+          {day.status === "completed" ? (
+            <Badge variant="secondary">Completed</Badge>
+          ) : null}
+          {day.status === "current" ? <Badge>Today</Badge> : null}
           {day.day === 6 ? (
             <Badge variant="secondary">Mountain Day</Badge>
           ) : null}
@@ -617,7 +623,11 @@ function DateNavigator() {
                 <button
                   key={day.id}
                   type="button"
-                  className="grid aspect-square min-h-11 place-items-center rounded-lg border bg-background text-base font-semibold transition-colors hover:bg-muted focus:outline-none"
+                  className={cn(
+                    "grid aspect-square min-h-11 place-items-center rounded-lg border bg-background text-base font-semibold transition-colors hover:bg-muted focus:outline-none",
+                    day.status === "completed" && "border-transparent bg-muted/65 text-muted-foreground",
+                    day.status === "current" && "border-primary bg-primary/10 text-primary"
+                  )}
                   onClick={(event) => {
                     event.currentTarget.blur()
                     navigateTo(day.id)
@@ -631,7 +641,11 @@ function DateNavigator() {
                 <button
                   key={day.id}
                   type="button"
-                  className="grid aspect-square min-h-11 place-items-center rounded-lg border bg-background text-base font-semibold transition-colors hover:bg-muted focus:outline-none"
+                  className={cn(
+                    "grid aspect-square min-h-11 place-items-center rounded-lg border bg-background text-base font-semibold transition-colors hover:bg-muted focus:outline-none",
+                    day.status === "completed" && "border-transparent bg-muted/65 text-muted-foreground",
+                    day.status === "current" && "border-primary bg-primary/10 text-primary"
+                  )}
                   onClick={(event) => {
                     event.currentTarget.blur()
                     navigateTo(day.id)
